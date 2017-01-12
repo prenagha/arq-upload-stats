@@ -2,7 +2,7 @@
 
 COUNT=25
 PARSED=`mktemp /tmp/arq-upload-stats.XXXXXXXXXX`
-./upload-parse.pl ~/Library/Logs/arqcommitter/*.log | egrep "^2017" > $PARSED
+./upload-parse.pl ~/Library/Logs/arqcommitter/*.log > $PARSED
 
 # Parsed output is $date,$size,$file
 
