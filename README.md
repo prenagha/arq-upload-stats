@@ -11,23 +11,23 @@ Reads you [Arq Backup](https://www.arqbackup.com) upload logs and outputs
 ```
 Top 5 Largest Single Upload Size
 -------------------------------------
-5000000,/Users/zzz/Music/iTunes/iTunes Library.itl
-5000000,/Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/mediatitlesedgeTable.tdb
-5000000,/Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/artistnamesedgeTable.tdb
-5000000,/Users/zzz/Library/Application Support/Slack/Cache/data_3
-5000000,/Users/zzz/Library/Application Support/Slack/Cache/data_2
+   4 MB /Users/zzz/Music/iTunes/iTunes Library.itl
+   4 MB /Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/mediatitlesedgeTable.tdb
+   4 MB /Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/artistnamesedgeTable.tdb
+   4 MB /Users/zzz/Library/Application Support/Slack/Cache/data_3
+   4 MB /Users/zzz/Library/Application Support/Slack/Cache/data_2
 
 Top 5 Largest Total Upload Size
 ------------------------------------
-2833176916 /Users/zzz/Music/iTunes/iTunes Library.itl
-1705643571 /Users/zzz/Win/er-next/.idea/workspace.xml
-834347186 /Users/zzz/Documents/Personal/moneydance/zzz.moneydance/safe/tiksync/trunk
-480026900 /Users/zzz/Pictures/Photos.photoslibrary/r/r/RKVersionAnalysisState/00.lij
-404054874 /Users/zzz/Library/Keychains/180961EB-330/ocspcache.sqlite3-wal
+   2 GB /Users/zzz/Music/iTunes/iTunes Library.itl
+   1 GB /Users/zzz/Win/er-next/.idea/workspace.xml
+  78 MB /Users/zzz/Documents/Personal/moneydance/zzz.moneydance/safe/tiksync/trunk
+  22 MB /Users/zzz/Pictures/Photos.photoslibrary/r/r/RKVersionAnalysisState/00.lij
+  11 MB /Users/zzz/Library/Keychains/180961EB-330/ocspcache.sqlite3-wal
 
 Top 5 Most Frequent Uploads
 ---------------------------------
-18544 /Users/zzz/dev/next/.idea/workspace.xml
+9544 /Users/zzz/dev/next/.idea/workspace.xml
 4486 /Users/zzz/Library/Calendars/FBF01D115.calendar/Info.plist
 1355 /Users/zzz/Library/SyncedPreferences/com.apple.syncedpreferences.plist
 1216 /Users/zzz/Music/iTunes/iTunes Library.itl
