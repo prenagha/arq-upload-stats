@@ -12,7 +12,7 @@ $since = parsedate("now - 10 days");
 $LOGFILE = $ARGV[0];
 open(LOGFILE) or die("Could not open log file.");
 foreach $line (<LOGFILE>) {
-    $line =~ m/^([0-9\/]+) [0-9:]+  DETAIL \[thread .+?\] uploading .+? (.+) offset=\d+ length=(\d+)/;
+  if ($line =~ m/^([0-9\/]+) [0-9:]+  DETAIL \[thread .+?\] uploading .+? (.+) offset=\d+ length=(\d+)/) {
     $date = $1;
     $dt = parsedate($date);
     $file = $2;
@@ -21,5 +21,6 @@ foreach $line (<LOGFILE>) {
     if ($dt >= $since) {
       print "$date,$size,$file\n";
     }
+  }
 }
 close(LOGFILE);
