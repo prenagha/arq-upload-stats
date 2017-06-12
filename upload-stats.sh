@@ -6,11 +6,6 @@ PARSED=`mktemp /tmp/arq-upload-stats.XXXXXXXXXX`
 
 # Parsed output is $date,$size,$file
 echo -e "\n\n" 
-echo "Top $COUNT Largest Single Upload Size"
-echo "-------------------------------------"
-cat $PARSED | cut -d, -f2-3 | sort | uniq | sort -t , -k 1 -nr | head -n $COUNT | tr '\n' '\0' | xargs -0 -n1 ./bytes.sh
-
-echo -e "\n\n" 
 echo "Top $COUNT Largest Total Upload Size"
 echo "------------------------------------"
 cat $PARSED | awk -F, '{i[$3]+=$2} END{for(x in i){print i[x]","x}}' | sort -t , -k 1 -nr | head -n $COUNT | tr '\n' '\0' | xargs -0 -n1 ./bytes.sh
