@@ -1,30 +1,15 @@
 # Arq Upload Statistics
 
-Reads you [Arq Backup](https://www.arqbackup.com) upload logs and outputs
+Updated Feb 2021 to support Arq 7
 
-* The most frequently uploaded files
-* The largest individual uploaded file
-* The largest cumulative uploaded file
+Reads you [Arq Backup](https://www.arqbackup.com) upload logs and outputs
+the most frequently uploaded files
+
+In Arq Backup Plan, Edit, Options, Enable `Include list of uploaded files...`
 
 # Sample Output
 
 ```
-Top 5 Largest Single Upload Size
--------------------------------------
-   4 MB /Users/zzz/Music/iTunes/iTunes Library.itl
-   4 MB /Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/mediatitlesedgeTable.tdb
-   4 MB /Users/zzz/Library/Containers/com.apple.siri.media-indexer/Data/artistnamesedgeTable.tdb
-   4 MB /Users/zzz/Library/Application Support/Slack/Cache/data_3
-   4 MB /Users/zzz/Library/Application Support/Slack/Cache/data_2
-
-Top 5 Largest Total Upload Size
-------------------------------------
-   2 GB /Users/zzz/Music/iTunes/iTunes Library.itl
-   1 GB /Users/zzz/Win/er-next/.idea/workspace.xml
-  78 MB /Users/zzz/Documents/Personal/moneydance/zzz.moneydance/safe/tiksync/trunk
-  22 MB /Users/zzz/Pictures/Photos.photoslibrary/r/r/RKVersionAnalysisState/00.lij
-  11 MB /Users/zzz/Library/Keychains/180961EB-330/ocspcache.sqlite3-wal
-
 Top 5 Most Frequent Uploads
 ---------------------------------
 9544 /Users/zzz/dev/next/.idea/workspace.xml
@@ -41,9 +26,9 @@ Top 5 Most Frequent Uploads
 * In Arq application Preferences, Advanced, set Log Level to *Detail*
     * Note: If you didn't have Detail level before you will need to let Arq backup for a while to get data to analyze
 * Adjust the ```$since``` variable in ```upload-parse.pl``` to your liking
-    * Default is to analyze data from the last 10 days
+    * Default is to analyze data from the last 30 days
 * Adjust the ```count``` and ```path``` in ```upload-stats.sh``` as needed
-    * Default count is top 25 items
-    * Default path is ```~/Library/Logs/arqcommitter/*.log```
+    * Default count is top 50 items
+    * Default path is ```/Library/Logs/ArqAgent/*.log```
 * Open a Terminal, cd to the cloned directory, run ```upload-stats.sh```
 
