@@ -10,7 +10,7 @@ $since = parsedate("now - 30 days");
 # 2021/02/11 13:11:42:546  INFO [thread 307] 11-Feb-2021 13:11:42 EST Uploading /Users/prenagha/Documents/Personal/moneydance/renaghan.moneydance/safe/settings
 
 while (my $line = <>) {
-  if ($line =~ m/^([0-9\/]+) [0-9:]+  INFO \[thread .+?\] .+? .+? Uploading (.+)/) {
+  if ($line =~ m/^([0-9\/]+) [0-9:]+  INFO \[thread .+?\] .+? .+? Uploaded (.+)/) {
     $date = $1;
     $dt = parsedate($date);
     $file = $2;
